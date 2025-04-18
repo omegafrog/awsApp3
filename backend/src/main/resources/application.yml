@@ -80,6 +80,7 @@ custom:
     backUrl: "http://${custom.dev.domain}:${server.port}"
     frontUrl: "http://${custom.dev.domain}:3000"
   site:
+    domain: "${custom.dev.domain}"
     backUrl: "${custom.dev.backUrl}"
     frontUrl: "${custom.dev.frontUrl}"
   jwt:
