@@ -71,7 +71,7 @@ jobs:
 
       - name: export image name
         id: export_image
-        run: echo "image_name=aws-app2" >> $GITHUB_OUTPUT
+        run: echo "image_name=aws-app3" >> $GITHUB_OUTPUT
 
       - name: 빌드 앤 푸시
         uses: docker/build-push-action@v3
