@@ -15,7 +15,7 @@ spring:
     hibernate:
       ddl-auto: update
     database-platform: # Hibernate 방언 지정 (PostgreSQL 예시)
-      org.hibernate.dialect.PostgreSQLDialect
+      org.hibernate.dialect.MySQLDialect
     properties:
       hibernate:
         format_sql: false
