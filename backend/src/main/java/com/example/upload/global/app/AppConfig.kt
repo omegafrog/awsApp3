@@ -17,6 +17,7 @@ class AppConfig {
         private lateinit var genFileDirPath: String
         private lateinit var environment: Environment
         private lateinit var siteBackUrl: String
+        private lateinit var domain: String
         private lateinit var siteFrontUrl: String
         private lateinit var springServletMultipartMaxFileSize: String
         private lateinit var springServletMultipartMaxRequestSize: String
@@ -28,6 +29,7 @@ class AppConfig {
         fun getGenFileDirPath(): String = genFileDirPath
         
         fun getSiteBackUrl(): String = siteBackUrl
+        fun getDomain(): String = domain
         
         fun getSiteFrontUrl(): String = siteFrontUrl
         
@@ -86,6 +88,11 @@ class AppConfig {
     @Autowired
     fun setEnvironment(environment: Environment) {
         Companion.environment = environment
+    }
+
+    @Value("\${custom.site.domain}")
+    fun setDomain(domain: String) {
+        Companion.domain = domain
     }
 
     @Value("\${custom.genFile.dirPath}")

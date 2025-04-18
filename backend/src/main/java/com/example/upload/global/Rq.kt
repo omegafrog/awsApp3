@@ -2,6 +2,7 @@ package com.example.upload.global
 
 import com.example.upload.domain.member.member.entity.Member
 import com.example.upload.domain.member.member.service.MemberService
+import com.example.upload.global.app.AppConfig
 import com.example.upload.global.exception.ServiceException
 import com.example.upload.global.security.SecurityUser
 import jakarta.servlet.http.Cookie
@@ -29,6 +30,13 @@ class Rq(
         // 인증 정보 저장소
         SecurityContextHolder.getContext().authentication =
             UsernamePasswordAuthenticationToken(user, null, user.authorities)
+    }
+    private fun cookieDomain(): String {
+        val domain = AppConfig.getDomain()
+
+        if(domain == "localhost") return "localhost"
+
+        return ".$domain"
     }
 
     val actor: Member
@@ -59,7 +67,7 @@ class Rq(
     fun addCookie(name: String?, value: String?) {
         Cookie(name, value)
             .apply {
-                domain = "localhost"
+                domain = cookieDomain()
                 path = "/"
                 isHttpOnly = true
                 secure = true
@@ -78,7 +86,7 @@ class Rq(
 
         Cookie(name, null)
             .apply {
-                domain = "localhost"
+                domain = cookieDomain()
                 path = "/"
                 isHttpOnly = true
                 secure = true
