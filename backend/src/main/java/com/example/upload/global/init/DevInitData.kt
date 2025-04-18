@@ -24,7 +24,7 @@ class DevInitData {
                 listOf(
                     "cmd.exe",
                     "/c",
-                    "npx --package typescript --package openapi-typescript --package punycode openapi-typescript apiV1.json -o ../frontend/src/lib/backend/apiV1/schema.d.ts"
+                    "npx --package typescript --package openapi-typescript --package punycode openapi-typescript apiV1.json -o frontend/src/lib/backend/apiV1/schema.d.ts"
                 )
             );
         };
