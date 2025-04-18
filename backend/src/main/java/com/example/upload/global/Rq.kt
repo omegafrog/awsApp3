@@ -36,7 +36,7 @@ class Rq(
 
         if(domain == "localhost") return "localhost"
 
-        return ".$domain"
+        return domain
     }
 
     val actor: Member
