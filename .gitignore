@@ -1,1 +1,8 @@
 .idea/
+/apiV1.json
+/db_dev.mv.db
+/terraform/.terraform/
+/terraform/.terraform.lock.hcl
+/terraform/terraform.tfstate
+/terraform/.terraform.tfstate.lock.info
+/terraform/secrets.tf
