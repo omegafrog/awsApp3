@@ -21,7 +21,12 @@ spring:
         format_sql: false
         highlight_sql: false
         use_sql_comments: false
-
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            redirect-uri: ${custom.prod.frontUrl}/login/oauth2/code/kakao
 logging:
   level:
     com.example: INFO
