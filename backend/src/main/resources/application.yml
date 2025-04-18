@@ -73,8 +73,8 @@ springdoc:
 custom:
   prod:
     domain: nbe-4-5-5-team5.shop
-    backUrl: "https://api.${custom.dev.domain}"
-    frontUrl: "http://www.${custom.dev.domain}"
+    backUrl: "https://api.${custom.prod.domain}"
+    frontUrl: "http://www.${custom.prod.domain}"
   dev:
     domain: localhost
     backUrl: "http://${custom.dev.domain}:${server.port}"
