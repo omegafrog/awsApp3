@@ -11,7 +11,7 @@ export default function Page() {
       {!isLogin && (
         <div className="flex flex-grow justify-center items-center">
           <Button>
-            <a href="http://localhost:8080/oauth2/authorization/kakao?redirectUrl=http://localhost:3000">
+            <a href={`${process.env.NEXT_PUBLIC_BACKEND_HOST}/oauth2/authorization/kakao?redirectUrl=${process.env.NEXT_PUBLIC_FRONTEND_HOST}`}>
               카카오 로그인
             </a>
           </Button>

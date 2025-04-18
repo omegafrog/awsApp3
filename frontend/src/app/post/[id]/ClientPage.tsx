@@ -113,7 +113,7 @@ export default function ClinetPage({
                   >
                     {file.fileExtTypeCode == "img" && (
                       <Image
-                        src={`http://localhost:8080/gen/postGenFile/${file.typeCode}/${file.fileDateDir}/${file.fileName}`}
+                        src={`${process.env.NEXT_PUBLIC_BACKEND_HOST}/gen/postGenFile/${file.typeCode}/${file.fileDateDir}/${file.fileName}`}
                         alt={file.originalFileName}
                         width={16}
                         height={16}
